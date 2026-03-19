@@ -1,0 +1,29 @@
+# Python program for implementation of Bubble Sort
+
+
+def bubble_sort(array_to_sort):
+    n = len(array_to_sort)
+
+    # Traverse through all array elements
+    for i in range(n - 1):
+        # range(n) also work but outer loop will repeat one time more than needed.
+
+        # Last i elements are already in place
+        for j in range(n - i - 1):
+            # traverse the array from 0 to n - i - 1
+            # Swap if the element found is greater
+            # than the next element
+            if array_to_sort[j] > array_to_sort[j + 1]:
+                array_to_sort[j], array_to_sort[j + 1] = array_to_sort[j + 1], array_to_sort[j]
+
+
+if __name__ == '__main__':
+    # Driver code to test above
+    arr = [64, 34, 25, 12, 22, 11, 90]
+
+    bubble_sort(arr)
+
+    print("Sorted array is:")
+    for a in range(len(arr)):
+        print("%d " % arr[a], end='')
+    print('')
