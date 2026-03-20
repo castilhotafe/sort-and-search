@@ -1,6 +1,5 @@
 import random
 import time
-from  quick_sort import quick_sort
 
 TARGET_COUNT = 10_000
 MAX_RANDOM_VALUE = 12_000
